@@ -1,0 +1,66 @@
+footer
+    background: #000
+    padding: 3rem 1rem
+    color: $main_color
+    .img_container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        img
+            width: 200px
+        .title
+            margin-top: 2rem
+            color: $third_color
+            text-transform: capitalize
+    ul
+        li,a
+            color: $third_color
+            margin-bottom: 10px
+            @include mainTransition
+            &:hover
+                color: $main_color
+            a
+                position: relative
+                padding: 5px 0px
+                &::after
+                    content: ''
+                    position: absolute
+                    height: 1px
+                    width: 100%
+                    background: $main_color
+                    bottom: 0px
+                    left: 0
+                    transform: scale(0)
+                    transform-origin: left
+                    @include mainTransition
+                &:hover
+                    &::after
+                        transform: scale(1)
+                        padding-left: 3px
+            &.head
+                color: $main_color
+                font-weight: 500
+                display: flex
+                align-items: center
+                margin-bottom: 1rem
+                img,i
+                    margin-right: 7px
+        .input-group
+            #basic-addon1
+                background: #fff
+                border: none
+                i
+                    color: $third_color
+                &.basic_two
+                    background: $fourth_color
+                    color: #main_color
+                    padding: 0.375rem 0.75rem
+                    i
+                        color: $main_color
+            input
+                border: none
+                outline: none
+                font-size: 14px
+                &:focus
+                    box-shadow: none

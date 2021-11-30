@@ -1,0 +1,74 @@
+.download_app
+    margin: 15rem 0rem 6rem
+    position: relative
+    .img_container
+        position: absolute
+        bottom: 8%
+        right: 10%
+        width: 30%
+        z-index: 4
+        img
+            width: 100%
+    .content
+        background: $frouth_bgColor
+        color: $second_color
+        border-radius: 13px
+        padding: 4rem 0rem 4rem 3rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: left
+        .title
+            margin-top: 1rem
+            font-weight: 600
+        .subtitle
+            margin-top: 1rem
+            width: 50%
+            color: $third_color
+        .btn_container
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            margin: 1rem 0rem
+            a
+                background: $third_bgColor
+                border: 1px solid $third_bgColor
+                color: $main_color
+                display: flex
+                align-items: center
+                padding: 0.2rem 1rem
+                border-radius: 10px
+                box-shadow: 0px 0px 7px 2px #e3d7d2
+                margin: 5px
+                font-size: 15px
+                position: relative
+                @include mainTransition
+                img
+                    padding-right: 10px
+                    z-index: 2
+                .text
+                    text-align: left
+                    display: flex
+                    align-items: left
+                    flex-direction: column
+                    font-size: 15px
+                    z-index: 2
+                    .main-text
+                        opacity: .5
+                        font-size: 13px
+                &::before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    width: 0
+                    background: $button_hover
+                    border-radius: 10px
+                    z-index: 1
+                    @include mainTransition
+                &:hover
+                    border: 1px solid transparent
+                    background: transparent
+                    &::before
+                        width: 100%

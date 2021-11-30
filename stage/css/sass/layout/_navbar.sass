@@ -1,0 +1,53 @@
+nav
+    padding: 1rem 0rem
+    border-bottom: 1px solid #dddddd3b
+    position: fixed
+    width: 100%
+    font-size: 17px
+    z-index: 100
+    @include mainTransition
+    &.show
+        background: rgba(0, 0, 0, 0.8)
+        backdrop-filter: blur(3px)
+        border-bottom: none
+        padding: .5rem 0rem
+
+    .row
+        align-items: center
+    .logo
+        width: 6rem
+        img
+            width: 100%
+    .content
+        display: flex
+        justify-content: right
+        a,button
+            color: $main_color
+            display: flex
+            align-items: center
+            padding: 5px 10px
+            position: relative
+            cursor: pointer
+            &::after
+                content: ''
+                position: absolute
+                height: 1px
+                width: 100%
+                background: $main_color
+                bottom: 0px
+                left: 0
+                transform: scale(0)
+                transform-origin: left
+                @include mainTransition
+            img
+                margin-right: 5px
+            &:hover
+                &::after
+                    transform: scale(1)
+        button
+            background: transparent
+            border: none
+            outline: none
+        a
+            &::after
+                transform-origin: right !important

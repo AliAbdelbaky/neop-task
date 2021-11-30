@@ -1,0 +1,89 @@
+.fav_food
+    margin-top: 4rem
+    .filter_list
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 2rem
+        button
+            display: flex
+            align-items: center
+            color: $second_color
+            font-size: 14px
+            width: 100%
+            padding: 10px 30px
+            background: $button_bgColor
+            border: 1px solid transparent
+            border-radius: 7px
+            outline: none
+            font-weight: 600
+            box-shadow: 0px 0px 10px 3px $sh_color
+            position: relative
+            @include mainTransition
+
+            img
+                width: 22px
+                margin-right: 10px
+            &::before
+                position: absolute
+                content: ''
+                top: 0
+                right: 0
+                bottom: 0
+                width: 0
+                background: $button_hover
+                border-radius: 10px
+                z-index: -1
+                @include mainTransition
+            &:hover
+                border: 1px solid transparent
+                background: transparent
+                color: $main_color
+                &::before
+                    width: 100%
+            &.active
+                color: $main_color
+                background: $button_hover
+                &:hover
+                    background: $button_hover
+                    &::before
+                        width: 0
+                        background: $button_bgColor
+    .filter_menu
+        .card
+            width: 100%
+            border-radius: 20px
+            text-align: left
+            color: $second_color
+            font-size: 15px
+            box-shadow: 0px 0px 10px 3px $sh_color
+            cursor: pointer
+            margin-bottom: 1rem
+            @include mainTransition
+            &:hover
+                box-shadow: 0px 0px 10px 6px $sh_color
+            img
+                width: 100%
+            .card-title
+                font-weight: 600
+            .card-text
+                color: $third_color
+            .card-footer
+                background: inherit
+                border: none
+                color: $fourth_color
+                font-weight: 700
+                display: flex
+                align-items: center
+                justify-content: space-between
+                border-radius: 0px 0px 20px 20px
+                a
+                    background: $fourth_color
+                    padding: 7px 8px
+                    text-align: center
+                    border-radius: 50%
+                    box-shadow: 0px 0px 8px 3px #7601038a
+                    @include mainTransition
+                    &:hover
+                        box-shadow: 0px 0px 0px 0px #7601038a
