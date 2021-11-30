@@ -9,15 +9,21 @@ footer
         align-items: center
         img
             width: 200px
+            @media (max-width:800px)
+                width: 50%
         .title
             margin-top: 2rem
             color: $third_color
             text-transform: capitalize
     ul
+        @media (max-width:800px)
+            padding: 0rem
         li,a
             color: $third_color
             margin-bottom: 10px
             @include mainTransition
+            @media (max-width:800px)
+                text-align: center
             &:hover
                 color: $main_color
             a
@@ -44,6 +50,9 @@ footer
                 display: flex
                 align-items: center
                 margin-bottom: 1rem
+                @media (max-width:800px)
+                    justify-content: center
+                    margin-top: 1rem
                 img,i
                     margin-right: 7px
         .input-group
