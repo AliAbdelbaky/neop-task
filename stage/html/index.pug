@@ -4,7 +4,7 @@ html(lang="en")
     head
         include layout/meta.pug
         include layout/styles.pug
-    body
+    body.no-scroll
         //- navbar
         include ./components/navbar.pug
         //-header
@@ -19,5 +19,7 @@ html(lang="en")
         include ./components/download_app.pug
         //- footer
         include ./components/footer.pug
+        //- loading animation
+        include ./components/loading.pug
         //- script
         include layout/scripts

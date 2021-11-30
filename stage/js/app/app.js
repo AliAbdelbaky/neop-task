@@ -3,7 +3,8 @@ const navbar = document.querySelector("nav"),
     filterBtns = document.querySelectorAll(".fav_food .filter_list button"),
     filterList = document.querySelectorAll('.fav_food  .filter_menu .item'),
     food_boxes = document.querySelectorAll(".food_review .box"),
-    filter_list = document.querySelectorAll(".fav_food .filter_list li");
+    filter_list = document.querySelectorAll(".fav_food .filter_list li"),
+    loading_animation = document.querySelector(".loading_animation");
 //--------------
 window.addEventListener('scroll', () => {
     this.scrollY >= 150 ? navbar.classList.add("show") : navbar.classList.remove("show");
@@ -104,3 +105,9 @@ gsap.timeline({
     })
     .fromTo('.download_app .content', { x: "-100%", opacity: "0" }, { x: "0%", opacity: "1" })
     .fromTo('.download_app .img_container', { x: "100%", opacity: "0" }, { x: "0%", opacity: "1" }, "-=0.5");
+window.onload = () => {
+    setTimeout(() => {
+        loading_animation.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    }, 2000)
+}
