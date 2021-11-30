@@ -105,6 +105,7 @@ gsap.timeline({
     })
     .fromTo('.download_app .content', { x: "-100%", opacity: "0" }, { x: "0%", opacity: "1" })
     .fromTo('.download_app .img_container', { x: "100%", opacity: "0" }, { x: "0%", opacity: "1" }, "-=0.5");
+//- loading aniamtion
 window.onload = () => {
     setTimeout(() => {
         loading_animation.classList.remove("active");
